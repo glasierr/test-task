@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.vlasenko</groupId>
+    <artifactId>test-task</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <!-- Maven and JAVAC depended properties -->
+        <project.build.jdk.ver>11</project.build.jdk.ver>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.target>${project.build.jdk.ver}</maven.compiler.target>
+        <maven.compiler.source>${project.build.jdk.ver}</maven.compiler.source>
+        <maven.compiler.testTarget>${project.build.jdk.ver}</maven.compiler.testTarget>
+        <maven.compiler.testSource>${project.build.jdk.ver}</maven.compiler.testSource>
+
+        <!-- Spring boot -->
+        <dep.spring.context.ver>5.2.4.RELEASE</dep.spring.context.ver>
+        <dep.spring.boot.web.ver>2.2.5.RELEASE</dep.spring.boot.web.ver>
+
+        <!-- Testing -->
+        <dep.test.spring.boot.web.ver>2.2.5.RELEASE</dep.test.spring.boot.web.ver>
+        <dep.test.junit.platform.ver>1.3.2</dep.test.junit.platform.ver>
+        <dep.test.junit.ver>5.6.0</dep.test.junit.ver>
+        <dep.test.mockito.ver>2.23.0</dep.test.mockito.ver>
+
+        <!-- Plugins -->
+        <plg.maven.surefire.ver>2.22.1</plg.maven.surefire.ver>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${dep.spring.boot.web.ver}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${dep.spring.context.ver}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${dep.test.spring.boot.web.ver}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-surefire-provider</artifactId>
+            <version>${dep.test.junit.platform.ver}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${dep.test.junit.ver}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${dep.test.junit.ver}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${dep.test.mockito.ver}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${plg.maven.surefire.ver}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

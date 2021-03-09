@@ -1,0 +1,55 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse (https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore)
+.metadata
+.classpath
+.project
+.externalToolBuilders/
+.loadpath
+.settings/
+*.launch
+*.tmp
+*.bak
+*.swp
+*~.nib
+.cproject
+.factorypath
+.buildpath
+.target
+.texlipse
+
+# IntelliJ IDEA (https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore)
+.idea/
+.idea_modules/
+atlassian-ide-plugin.xml
+*.iml
+*.ipr
+*.iws
+/out/
+classes/
+
+# Windows (https://github.com/github/gitignore/blob/master/Global/Windows.gitignore)
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+
+# OSX (https://github.com/github/gitignore/blob/master/Global/OSX.gitignore)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux (https://github.com/github/gitignore/blob/master/Global/Linux.gitignore)
+*~
+.directory
+.Trash-*
+
+#Logs
+**/*.log
+logs
+
+#Local
+**/LocalPolskiZAnastasiaApplication.java
+**/application-local.yml

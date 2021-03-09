@@ -1,0 +1,5 @@
+app.throttling:
+  enabled: true
+  guest-rps: 10
+
+spring.application.name: Vlasenko Test Task
